@@ -27,7 +27,7 @@ const unbundledPath = path.join(global.config.build.rootDirectory, global.config
 // You should not need to modify anything in this file
 // If you find that you can't accomplish something because of the way
 // this module is structured please file an issue
-// https://github.com/PolymerElements/generator-polymer-init-custom-build/issues
+// https://github.com/jay8t6/generator-polymer-init-custom-build-es6/issues
 
 // Returns a ReadableStream of all the source files
 // Source files are those in src/** as well as anything

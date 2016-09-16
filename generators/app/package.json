@@ -1,6 +1,6 @@
 {
   "name": "polymer-starter-kit-custom-build-es6",
-  "version": "0.0.0",
+  "version": "1.0.3",
   "description": "ES6 support for Polymer 1.0 custom build apps, written on top of Rob Dodson's polymer-starter-kit-custom-build plugin.",
   "repository": {
     "type": "git",
@@ -8,7 +8,7 @@
   },
   "license": "http://polymer.github.io/LICENSE.txt",
   "bugs": {
-    "url": "https://github.com/PolymerElements/generator-polymer-init-custom-build-es6/issues"
+    "url": "https://github.com/jay8t6/generator-polymer-init-custom-build-es6/issues"
   },
   "engines": {
     "node": ">=4.0"
