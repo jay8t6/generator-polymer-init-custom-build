@@ -1,7 +1,7 @@
 {
-  "name": "generator-polymer-init-custom-build",
+  "name": "generator-polymer-init-custom-build-es6",
   "version": "1.0.0",
-  "description": "A starting point for building apps using polymer-build",
+  "description": "A starting point for building apps with ES6 using polymer-build, written on top of Rob Dodson's generator-polymer-init-custom-build plugin.",
   "files": [
     "generators"
   ],
@@ -25,7 +25,7 @@
     "gulp-plumber": "^1.0.0",
     "gulp-nsp": "^2.1.0"
   },
-  "repository": "/generator-polymer-init-custom-build",
+  "repository": "/generator-polymer-init-custom-build-es6",
   "scripts": {
     "prepublish": "gulp prepublish",
     "test": "gulp"

@@ -1,20 +1,22 @@
 {
-  "name": "polymer-starter-kit-custom-build",
+  "name": "polymer-starter-kit-custom-build-es6",
   "version": "0.0.0",
-  "description": "A starting point for Polymer 1.0 custom build apps",
+  "description": "ES6 support for Polymer 1.0 custom build apps, written on top of Rob Dodson's polymer-starter-kit-custom-build plugin.",
   "repository": {
     "type": "git",
-    "url": "git@github.com:PolymerElements/generator-polymer-init-custom-build"
+    "url": "git@github.com:jay8t6/generator-polymer-init-custom-build-es6"
   },
   "license": "http://polymer.github.io/LICENSE.txt",
   "bugs": {
-    "url": "https://github.com/PolymerElements/generator-polymer-init-custom-build/issues"
+    "url": "https://github.com/PolymerElements/generator-polymer-init-custom-build-es6/issues"
   },
   "engines": {
     "node": ">=4.0"
   },
   "private": true,
   "devDependencies": {
+    "babel-plugin-array-includes": "^2.0.3",
+    "babel-preset-es2015-script": "^1.1.0",
     "del": "^2.2.1",
     "gulp": "gulpjs/gulp#4.0",
     "gulp-if": "^2.0.1",
