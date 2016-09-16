@@ -1,7 +1,5 @@
 # generator-polymer-init-custom-build-es6
 
-[![Build Status](https://travis-ci.org/PolymerElements/generator-polymer-init-custom-build-es6.svg?branch=eslint-travis)](https://travis-ci.org/PolymerElements/generator-polymer-init-custom-build-es6)
-
 This template is a starting point for building apps using Polymer Starter Kit
 with a custom gulp process leveraging
 [polymer-build](https://github.com/Polymer/polymer-build), the library
