@@ -51,12 +51,6 @@ const babel = require('gulp-babel');
 const uglify = require('gulp-uglify');
 const htmlmin = require('gulp-htmlmin');
 
-//add your babel config here
-const babelConfig = {
-    presets: ['es2015-script'],
-    plugins: ['array-includes']
-};
-
 // The source task will split all of your source files into one
 // big ReadableStream. Source files are those in src/** as well as anything
 // added to the sourceGlobs property of polymer.json.
@@ -64,13 +58,16 @@ const babelConfig = {
 // will be split out into temporary files. You can use gulpif to filter files
 // out of the stream and run them through specific tasks.
 function source() {
-  return project.splitSource().
-    pipe(gulpif('**/*.html', htmlmin({
-      collapseWhitespace: true
-    }))).
-    pipe(gulpif('**/*.js', babel(babelConfig))).
-    pipe(gulpif('**/*.js', uglify())).
-    pipe(project.rejoin()); // Call rejoin when you're finished
+  return project.splitSource()
+    .pipe(gulpif('**/*.html', htmlmin({
+      collapseWhitespace: true,
+      removeComments: true,
+      minifyCSS: true,
+      uglifyJS: true
+    })))
+    .pipe(gulpif('**/*.js', babel()))
+    .pipe(gulpif('**/*.js', uglify()))
+    .pipe(project.rejoin()); // Call rejoin when you're finished
 }
 
 // The dependencies task will split all of your bower_components files into one
@@ -78,13 +75,16 @@ function source() {
 // You probably don't need to do anything to your dependencies but it's here in
 // case you need it :)
 function dependencies() {
-  return project.splitDependencies().
-    pipe(gulpif('**/*.html', htmlmin({
-      collapseWhitespace: true
-    }))).
-    pipe(gulpif('**/*.js', babel(babelConfig))).
-    pipe(gulpif('**/*.js', uglify())).
-    pipe(project.rejoin());
+  return project.splitDependencies()
+    .pipe(gulpif('**/*.html', htmlmin({
+      collapseWhitespace: true,
+      removeComments: true,
+      minifyCSS: true,
+      uglifyJS: true
+    })))
+    .pipe(gulpif('**/*.js', babel()))
+    .pipe(gulpif('**/*.js', uglify()))
+    .pipe(project.rejoin());
 }
 
 // Clean the build directory, split all source and dependency files into streams
