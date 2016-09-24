@@ -24,7 +24,7 @@ Generate your new project using `polymer init`:
 
     mkdir my-app
     cd my-app
-    polymer init custom-build
+    polymer init custom-build-es6
 
 ### Start the development server
 
