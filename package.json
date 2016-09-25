@@ -1,6 +1,6 @@
 {
   "name": "generator-polymer-init-custom-build-es6",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "A starting point for building apps with ES6 using polymer-build, written on top of Rob Dodson's generator-polymer-init-custom-build plugin.",
   "files": [
     "generators"

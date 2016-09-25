@@ -1,6 +1,6 @@
 {
   "name": "polymer-starter-kit-custom-build-es6",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "ES6 support for Polymer 1.0 custom build apps, written on top of Rob Dodson's polymer-starter-kit-custom-build plugin.",
   "repository": {
     "type": "git",
@@ -20,6 +20,7 @@
     "del": "^2.2.1",
     "gulp": "gulpjs/gulp#4.0",
     "gulp-babel": "^6.1.2",
+    "gulp-clean-css": "^2.0.12",
     "gulp-htmlmin": "^3.0.0",
     "gulp-if": "^2.0.1",
     "gulp-uglify": "^2.0.0",

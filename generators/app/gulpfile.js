@@ -50,6 +50,7 @@ const project = require('./gulp-tasks/project.js');
 const babel = require('gulp-babel');
 const uglify = require('gulp-uglify');
 const htmlmin = require('gulp-htmlmin');
+const cleanCSS = require('gulp-clean-css');
 
 // The source task will split all of your source files into one
 // big ReadableStream. Source files are those in src/** as well as anything
@@ -59,6 +60,7 @@ const htmlmin = require('gulp-htmlmin');
 // out of the stream and run them through specific tasks.
 function source() {
   return project.splitSource()
+    .pipe(gulpif('**/*.css', cleanCSS()))
     .pipe(gulpif('**/*.html', htmlmin({
       collapseWhitespace: true,
       removeComments: true,
@@ -76,6 +78,7 @@ function source() {
 // case you need it :)
 function dependencies() {
   return project.splitDependencies()
+    .pipe(gulpif('**/*.css', cleanCSS()))
     .pipe(gulpif('**/*.html', htmlmin({
       collapseWhitespace: true,
       removeComments: true,
