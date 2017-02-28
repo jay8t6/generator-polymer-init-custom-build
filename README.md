@@ -9,11 +9,9 @@ powering [Polymer CLI](https://github.com/Polymer/polymer-cli).
 
 ##### Prerequisites
 
-First, install
-[Polymer CLI](https://www.polymer-project.org/1.0/docs/tools/polymer-cli)
-and generator-polymer-init-custom-build-es6 using
-[npm](https://www.npmjs.com/)
-(we assume you have pre-installed [node.js](https://nodejs.org/)).
+First, install [Polymer CLI](https://github.com/Polymer/polymer-cli) and
+generator-polymer-init-custom-build-es6 using [npm](https://www.npmjs.com) (we
+assume you have pre-installed [node.js](https://nodejs.org)).
 
     npm install -g polymer-cli
     npm install -g generator-polymer-init-custom-build-es6
@@ -35,8 +33,8 @@ routing for the app:
 
 ### Build
 
-Rather than rely on the usual `polymer build` command, this project gives you
-an "escape hatch" so you can include additional steps in your build process.
+Rather than rely on the usual `polymer build` command, this project gives you an
+"escape hatch" so you can include additional steps in your build process.
 
 The included `gulpfile.js` relies on
 [the `polymer-build` library](https://github.com/Polymer/polymer-build),
@@ -44,19 +42,13 @@ the same library that powers Polymer CLI. Out of the box it will clean the
 `build` directory, and provide image minification. Follow the comments in the
 `gulpfile.js` to add additional steps like JS transpilers or CSS preprocessors.
 
-    gulp
+    npm run build
 
 ### Preview the build
 
-This command serves the minified version of the app at `http://localhost:8080`
-in an unbundled state, as it would be served by a push-compatible server:
+This command serves the minified version of the app at `http://localhost:8080`:
 
-    polymer serve build/unbundled
-
-This command serves the minified version of the app at `http://localhost:8080`
-generated using fragment bundling:
-
-    polymer serve build/bundled
+    polymer serve build/
 
 ### Run tests
 
@@ -76,12 +68,8 @@ the section in
 ### Adding a new view
 
 You can extend the app by adding more views that will be demand-loaded
-e.g. based on the route, or to progressively render non-critical sections
-of the application.  Each new demand-loaded fragment should be added to the
-list of `fragments` in the included `polymer.json` file.  This will ensure
-those components and their dependencies are added to the list of pre-cached
-components (and will have bundles created in the fallback `bundled` build).
-
-## License
-
-The Polymer project uses a BSD-like license available [here](./LICENSE.txt)
+e.g. based on the route, or to progressively render non-critical sections of the
+application. Each new demand-loaded fragment should be added to the list of
+`fragments` in the included `polymer.json` file. This will ensure those
+components and their dependencies are added to the list of pre-cached components
+(and will have bundles created in the fallback `bundled` build).
