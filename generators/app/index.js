@@ -28,7 +28,7 @@ module.exports = yeoman.Base.extend({
 
     // Copy explicitly the PSK dotfiles
     this.fs.copy(
-      this.templatePath('{.eslintrc.json,.gitattributes,.gitignore}'),
+      this.templatePath('{.eslintrc.json,.gitattributes,.gitignore,.babelrc}'),
       this.destinationPath()
     );
 
@@ -42,7 +42,7 @@ module.exports = yeoman.Base.extend({
 
     // Overwrite the PSK files with new files
     this.fs.copy(
-      this.templatePath('{package.json,README.md}'),
+      this.templatePath('{package.json,polymer.json,README.md}'),
       this.destinationPath()
     );
   },
